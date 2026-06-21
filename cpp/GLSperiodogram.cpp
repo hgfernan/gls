@@ -31,21 +31,18 @@ extern "C" {
       YYhat = 0;
       
       /* Sum where independent of frequency */
-      for (int ii = 0; ii < ndata; ++ii)
-      {
+      for (int ii = 0; ii < ndata; ++ii) {
         Y += w[ii] * y[ii];
         YYhat += w[ii] * y[ii] * y[ii];
       }
       
-      for (int jj = 0; jj < nfreq; ++jj)
-      {
+      for (int jj = 0; jj < nfreq; ++jj) {
         omega = 2.0 * M_PI  / prange[jj];
         
         C = S = 0.0;
         YChat = YShat = CChat = SShat = CShat = 0.0;
         
-        for (int ii = 0; ii < ndata; ++ii)
-        {
+        for (int ii = 0; ii < ndata; ++ii) {
           ccos = cos(omega * x[ii]);			       
           ssin = sin(omega * x[ii]);
           

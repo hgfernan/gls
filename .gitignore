@@ -1,1 +1,5 @@
 bin/
+.vscode/
+
+build_debug/
+build_release/
